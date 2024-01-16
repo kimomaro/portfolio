@@ -1,0 +1,588 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lateef:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Noto Sans', 'Noto Sans KR', 'Lato', sans-serif;
+    color: #333;
+}
+
+.container {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+section h2 {
+    display: none;
+}
+
+section.main_visual {
+    height: 100%;
+    background-color: #F3F3F3;
+    box-sizing: border-box;
+
+
+}
+
+section.main_visual .bg {
+    width: 100%;
+    box-sizing: border-box;
+
+
+}
+
+section.main_visual .bg img {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    vertical-align: top;
+    border-radius: 0 0 50px 50px;
+
+
+}
+
+img.close {
+    position: fixed;
+    top: 10%;
+    right: 100px;
+    display: none;
+    z-index: 10;
+    transition: transform 2s;
+}
+
+img.close:hover {
+    transform: rotate(720deg);
+}
+
+section.main_visual.on {}
+
+section.txt {
+    width: 100%;
+    height: 530px;
+    background-color: #F3F3F3;
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+
+
+section.txt .container>span {
+    font-size: 110px;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 100px;
+}
+
+section.txt .word {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+section.txt .word .txt_left {
+    flex: 2;
+    height: 300px;
+    padding: 0 100px 0 0;
+    box-sizing: border-box;
+
+}
+
+section.txt .word .txt_left span {
+    font-size: 24px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+section.txt .word .txt_left p {
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+section.txt .word .middle {
+    flex: 1;
+}
+
+section.txt .word .right {
+    flex: 1;
+
+}
+
+section.txt .word ul {
+    box-sizing: border-box;
+}
+
+section.txt .word ul li {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+section.txt .word ul li:nth-child(1) {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+section.overview {
+    width: 100%;
+    padding: 100px 0 0 0;
+    box-sizing: border-box;
+    background-color: #F3F3F3;
+    position: relative;
+}
+
+section.overview .img {
+    width: 100%;
+    height: 110vh;
+    background-image: url(../img/wakey_overview.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+section.overview span {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50px;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+section.main {
+    width: 100%;
+    height: 1400px;
+    position: relative;
+    background-image: url(../img/circle_bg.png);
+    background-size: 100% 750px;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+section.main h2 {
+    text-indent: -9999px;
+}
+
+section.main .txt {
+    position: absolute;
+    left: 50%;
+    top: 136px;
+    transform: translateX(-50%) translateY(-70px);
+    transition: all 0.3s;
+    opacity: 0;
+    text-align: center;
+    color: #fff;
+}
+section.main .txt.on {
+    transform: translateX(-50%) translateY(0px);
+    opacity: 1;
+
+
+}
+
+section.main .txt span {
+    font-size: 36px;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+section.main .txt p {
+    font-size: 20px;
+    line-height: 1.75;
+}
+
+section.main .box {
+}
+
+section.main .phone {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-70px);
+    transition: all 0.3s 0.1s;
+    opacity: 0;
+    top: 450px;
+    width: 350px;
+}
+section.main .phone.on {
+    transform: translateX(-50%) translateY(0px);
+    opacity: 1;
+
+}
+section.main .box {
+}
+
+section.main .box>div {
+    width: 520px;
+    height: 170px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(255, 255, 255, 0.25) inset;
+    padding: 40px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    opacity: 0;
+}
+
+section.main .box .box1 {
+    left: 10%;
+    top: 10%;
+    transform: translateY(350px) translateX(-50px);
+    transition: all 0.3s;
+}
+
+section.main .box .box2 {
+    right: 10%;
+    top: 20%;
+    transform: translateY(350px) translateX(50px);
+    transition: all 0.3s 0.1s;
+
+}
+
+section.main .box .box3 {
+    left: 10%;
+    top: 30%;
+    transform: translateY(350px) translateX(-50px);
+    transition: all 0.3s 0.2s;
+
+}
+
+section.main .box .box4 {
+    right: 10%;
+    top: 40%;
+    transform: translateY(350px) translateX(50px);
+    transition: all 0.3s 0.3s;
+
+}
+section.main .box>div.on{
+    opacity: 1;
+    transform: translateY(350px) translateX(0px);
+
+}
+section.main .box>div i {
+    font-size: 47px;
+    display: inline-block;
+    flex: 1;
+}
+
+section.main .box>div span {
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.7;
+    flex: 7;
+
+}
+
+section.progress {
+    width: 100%;
+    height: 1200px;
+    background-image: url(../img/progress_bg.png);
+    background-size: 100% 1200px;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 100px 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+section.progress .txt {
+    text-align: center;
+    transition: all 0.3s;
+    transform: translateY(-70px);
+    opacity: 0;
+}
+section.progress .txt.on {
+    transform: translateY(0px);
+    opacity: 1;
+
+}
+section.progress .txt span {
+    font-size: 36px;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+section.progress .txt p {
+    font-size: 20px;
+    line-height: 1.75;
+}
+
+section.progress .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.progress .content .pro_left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    transform: translateX(-70px);
+    transition: all 0.3s 0.1s;
+    opacity: 0;
+}
+section.progress .content .pro_left.on{
+    transform: translateX(0px);
+    opacity: 1;
+}
+section.progress .content .pro_left .phone {
+    width: 500px;
+    transform: translateY(30px);
+
+}
+
+section.progress .content .pro_right {
+    flex: 1;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: 40%;
+    justify-content: space-around;
+    transform: translateX(70px);
+    transition: all 0.3s 0.3s;
+    opacity: 0;
+}
+section.progress .content .pro_right.on{
+    transform: translateX(0px);
+    opacity: 1;
+}
+section.progress .content .pro_right img {
+    width: 400px;
+}
+
+section.progress .content .pro_right img:nth-of-type(2) {
+    transform: translateY(10px);
+}
+
+section.progress .content .pro_right p {
+    font-size: 16px;
+    transform: translateX(50px) translateY(-10px);
+}
+
+section.page {
+    background-color: #68728D;
+    width: 100%;
+    height: 1150px;
+    position: relative;
+    color: #fff;
+}
+
+section.page .txt {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%) translateY(-70px);
+    transition: all 0.3s;
+    opacity: 0;
+    top: 150px;
+}
+section.page .txt.on {
+    transform: translateX(-50%) translateY(0px);
+    opacity: 1;
+}
+
+section.page .txt span {
+    font-size: 36px;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+section.page .txt p {
+    font-size: 20px;
+    line-height: 1.75;
+}
+
+section.page .p_contents {
+    display: flex;
+}
+
+section.page .p_contents .page_left {
+    flex: 1;
+    z-index: 2;
+    transform: translateX(-50px);
+    transition: all 0.3s 0.1s;
+    opacity: 0;
+}
+section.page .p_contents .page_left.on {
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+
+section.page .p_contents .page_left img {
+    width: 500px;
+    transform: translateX(100px) translateY(300px);
+}
+
+section.page .p_contents .page_right {
+    flex: 1;
+    display: flex;
+    transform: translateY(35%);
+
+}
+
+section.page .p_contents .page_right img {
+    width: 250px;
+}
+
+section.page .p_contents .page_right .pr_left {
+    margin-right: 50px;
+    box-sizing: border-box;
+    transform: translateY(50px);
+    transition: all 0.3s 0.3s;
+    opacity: 0;
+}
+section.page .p_contents .page_right .pr_left.on{
+    opacity: 1;
+    transform: translateY(0px);
+
+}
+section.page .p_contents .page_right .pr_right{
+    transform: translateY(50px);
+    transition: all 0.3s 0.5s;
+    opacity: 0;
+}
+section.page .p_contents .page_right .pr_right.on{
+    opacity: 1;
+    transform: translateY(0px);
+}
+section.sub_page {
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    position: relative;
+    margin: 400px 0 200px 0;
+
+}
+
+section.sub_page .swiper {
+    width: 100%;
+    height: 100%;
+
+}
+
+section.sub_page .swiper-slide {
+    width: 365px;
+    object-fit: cover;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.sub_page .swiper-slide img {
+    display: block;
+    width: 365px;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 13px 23px 24.9px 0px rgba(0, 0, 0, 0.16);
+    border-radius: 30px;
+
+}
+
+section.sub_page .txt {
+    position: absolute;
+    top: 40%;
+    transform: translate(-50%);
+    left: 20%;
+    text-align: center;
+    /*     z-index: 1; */
+}
+
+section.sub_page .txt span {
+    font-size: 36px;
+    font-weight: 500;
+    color: #424753;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+section.sub_page .txt p {
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+
+section.footer {
+    width: 100%;
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px 50px;
+    box-sizing: border-box;
+    background-image: url(../img/tara_footer_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+
+}
+
+.footer .f_top {
+    display: flex;
+    flex-direction: column;
+    color: #FFFCED;
+
+}
+
+.footer .f_top p {
+    font-size: 20px;
+    display: inline-block;
+    font-weight: 300;
+}
+
+.footer .f_top span {
+    font-size: 80px;
+    display: inline-block;
+    margin-bottom: 50px;
+    letter-spacing: 3px;
+
+}
+
+.footer .f_top button {
+    width: 150px;
+    height: 43px;
+    line-height: 43px;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #FFFCED;
+    color: #FFFCED;
+    border-radius: 30px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.footer .f_top button:hover {
+    background-color: #FFFCED;
+    color: #000;
+}
+
+.footer .f_bottom {}
+
+.footer .f_bottom img {
+    width: 500px;
+}

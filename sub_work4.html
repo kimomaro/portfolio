@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sub_Wakey</title>
+    <link rel="icon" href="favicon2.ico" type="image/x-icon">
+
+    <script src="https://kit.fontawesome.com/672e368b20.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/sub_work4.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/sub_app.js"></script>
+    <script>
+        $(function () {
+            //close 버튼 
+            $(window).scroll(function () {
+                let st = $(window).scrollTop();
+                if (st > 1100) {
+                    $('img.close').fadeIn();
+                } else {
+                    $('img.close').fadeOut()
+                }
+                //배경 스크롤시 패딩값 변화
+
+                if (st > 100 && st < 300) {
+                    $('section.main_visual .bg').animate({ padding: '0 100px 100px 100px' }, 1000)
+                } else if (st >= 2000) {
+                    $('section.main_visual .bg').css('padding', '0px')
+                } else {
+                    return
+                }
+            })
+
+        })
+    </script>
+</head>
+
+<body>
+    <a href="index.html"><img src="img/close.png" alt="" class="close"></a>
+    <section class="main_visual">
+        <h2>main_visual</h2>
+        <div class="bg"><img src="img/wakey_main.png" alt=""></div>
+    </section><!-- //.main_visual -->
+    <section class="txt">
+        <h2>txt</h2>
+        <div class="container">
+            <span>Wakey</span>
+            <div class="word">
+                <div class="txt_left">
+                    <span>PROJECT BACKGROUND</span>
+                    <p> Wakey는 여기저기 흩어진 나의 건강데이터를 한눈에 확인하고 관리할 수 있도록 모든 건강 관련 정보를 제공하는 서비스입니다. 개인의 정보가 기록됨으로써 건강관리를 위한
+                        지지를 받는 데 도움을 주고 나의 건강을 한 눈에 확인해 볼 수 있고 지킬 수 있습니다.
+                    </p>
+                </div><!-- //.txt_left -->
+                <ul class="middle">
+                    <li>SERVICE</li>
+                    <li>APP DESIGN</li>
+                    <li>PROTOTYPING</li>
+                    <li>HEALTH CARE</li>
+                </ul>
+                <ul class="right">
+                    <li>Year</li>
+                    <li>2023.11</li>
+                </ul>
+            </div><!-- //.word -->
+        </div><!-- //.container -->
+    </section><!-- //.tit -->
+    <section class="overview">
+        <h2>overview</h2>
+        <span>[OVERVIEW]</span>
+        <div class="img"></div>
+    </section><!-- //.overview -->
+    <section class="main">
+        <h2>main</h2>
+        <div class="txt">
+            <span>Main</span>
+            <p>기록/ 식단/ 홈/ 활동/ 마이페이지의 구성으로<br>
+                사용자가 가장 ‘효과적’이라고 인식하는<br>
+                운동서비스, 식생활, 체중조절에 대한 기록을 중심으로<br>
+                꾸준한 운동과 균형잡힌 식사 등 바른 습관을 유지하는 것을 도와줍니다.</p>
+        </div><!-- //.txt -->
+        <div class="box">
+            <div class="box1"><i class="fa-regular fa-calendar-days"></i><span>캘리더에 직접 날짜를  보며 기록할 수 있는 메뉴로<br> 한달간의 기록을 한번에 볼 수 있습니다</span></div>
+            <div class="box2"><i class="fa-solid fa-utensils"></i>
+            <span>식단을 기록하는 메뉴로 이미 존재하는 레시피와<br> 사용자만의 레시피도 등록이 가능합니다</span></div>
+            <div class="box3"><i class="fa-solid fa-square-poll-vertical"></i>
+            <span>일정 기간마다 나의 변화를 그래프를 통해
+                <br>직관적으로 볼 수 있습니다.</span></div>
+            <div class="box4"><i class="fa-solid fa-droplet"></i>
+            <span>물 섭취량, 몸무게, 운동 기록 저장 등 <br>
+                다양한 기록이 가능합니다.</span></div>
+        </div><!-- //.box -->
+        <img src="img/phone.png" alt="" class="phone">
+    </section><!-- //.main -->
+    <section class="progress">
+        <div class="container">
+            <div class="txt">
+                <span>MY PROGRESS</span>
+                <p>일정 기간동안의 나의 변화를 그래프로 보여주는 페이지입니다</p>
+            </div><!-- //.txt -->
+            <div class="content">
+                <div class="pro_left">
+                    <img src="img/progress_phone.png" alt="" class="phone">
+                </div><!-- //.pro_right -->
+                <div class="pro_right">
+                    <img src="img/stat1.png" alt="">
+                    <p>일주일, 한달, 3달 그리고 1년을 기준으로<br>
+                        나의 변화를 직관적으로 볼 수 있습니다.</p>
+                    <img src="img/stat3.png" alt="">
+                    <p>식단마다 영양 점수를 매겨 식사의 균형을<br>
+                        볼 수 있는 그래프입니다.</p>
+                </div><!-- //.pro_right -->
+            </div>
+        </div>
+    </section><!-- //.progress -->
+    <section class="page">
+        <div class="container">
+            <div class="txt">
+                <span>MY PAGE</span>
+                <p>나의 대한 정보를 저장하는 곳입니다<br>
+                    목표 설정과 기록해두었던 식단 모두 확인 할 수 있습니다</p>
+            </div><!-- //.txt -->
+            <div class="p_contents">
+                <div class="page_left">
+                    <img src="img/mypage.png" alt="">
+                </div><!-- //.page_left -->
+                <div class="page_right">
+                    <div class="pr_left">
+                        <p>식단 기록 페이지</p>
+                        <img src="img/mypage2.png" alt="">
+                    </div><!-- //.pr_left -->
+                    <div class="pr_right">
+                        <p>식단 검색 페이지</p>
+                        <img src="img/mypage3.png" alt="">
+                    </div><!-- //.pr_right -->
+                </div><!-- //.page_left -->
+            </div><!-- //.p_contents -->
+        </div>
+
+    </section><!-- //.page -->
+    <section class="sub_page">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/sub_page1.png" alt=""></div>
+                <div class="swiper-slide"><img src="img/sub_page2.png" alt=""></div>
+                <div class="swiper-slide"><img src="img/sub_page3.png" alt=""></div>
+                <div class="swiper-slide"><img src="img/sub_page4.png" alt=""></div>
+                <div class="swiper-slide"><img src="img/sub_page5.png" alt=""></div>
+                <div class="swiper-slide"><img src="img/sub_page6.png" alt=""></div>
+            </div>
+            <!--             <div class="swiper-pagination"></div> -->
+        </div>
+        <div class="txt">
+            <span>SUB PAGE</span>
+            <p>물 섭취량 기록, 하루 전체 영양성분 분석,<br>
+                몸무게 저장, 운동 기록 저장 등 기록에 대한 페이지들입니다 </p>
+        </div><!-- //.txt -->
+    </section><!-- //.laptop -->
+    <section class="footer">
+        <div class="f_top">
+            <p>Previous project</p>
+            <span>03/국립중앙도서관</span>
+            <button type="button" onclick="location.href = 'sub_work3.html'">VIEW PROJECT</button>
+        </div><!-- //.f_top -->
+        <div class="f_bottom">
+            <img src="img/1.png" alt="">
+        </div><!-- //.f_bottom -->
+    </section><!-- //.footer -->
+</body>
+
+</html>

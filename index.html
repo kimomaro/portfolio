@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ho.0 portfolio</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/672e368b20.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js">
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</head>
+<body>
+
+    <div class="logo"><a href="#"><img src="img/logo.png" alt="portfolio"></a></div>
+    <nav>
+        <div class="ham"><i class="fa-solid fa-grip-lines"></i></div>
+        <div class="close"><span>close</span></div>
+        <ul>
+            <li>00 Home</li>
+            <li>01 About</li>
+            <li>02 Work</li>
+            <li>03 Graphic Art</li>
+            <li>04 Contact</li>
+        </ul>
+    </nav>
+    <section class="main">
+        <h2>main</h2>
+        <div class="container">
+            <span>WEB<br>DESIGNER</span>
+            <span>HO YOUNG KIM<br>@SINCE 2017-24</span>
+        </div>
+        <div class="flow_banner">
+            <ul class="list">
+                <li><a href="sub_work4.html" target="_blank"><img src="img/slide1.png" alt=""></a></li>
+                <li><a href="sub_work.html" target="_blank"><img src="img/slide2.png" alt=""></a></li>
+                <li><a href="sub_work2.html" target="_blank"><img src="img/slid3.png" alt=""></a></li>
+                <li><a href="sub_work3.html" target="_blank"><img src="img/slide4.png" alt=""></a></li>
+                <li><a href="sub_work2.html" target="_blank"><img src="img/slide6.png" alt=""></a></li>
+                <li><a href="sub_work2.html" target="_blank"><img src="img/slide7.png" alt=""></a></li>
+            </ul>
+        </div><!-- //.flow_banner -->
+        <script>
+            $(window).on('load', function () {
+                setFlowBanner();
+            })
+
+            function setFlowBanner() {
+                const $wrap = $('.flow_banner');
+                const $list = $('.flow_banner .list');
+                let wrapWidth = ''; //$wrap의 가로 크기
+                let listWidth = ''; //$list의 가로 크기
+                const speed = 50; //1초에 몇픽셀 이동하는지 설정
+
+                //리스트 복제
+                let $clone = $list.clone();
+                $wrap.append($clone);
+                flowBannerAct()
+
+                //반응형 :: 디바이스가 변경 될 때마다 배너 롤링 초기화
+                let oldWChk = window.innerWidth > 1279 ? 'pc' : window.innerWidth > 767 ? 'ta' : 'mo';
+                $(window).on('resize', function () {
+                    let newWChk = window.innerWidth > 1279 ? 'pc' : window.innerWidth > 767 ? 'ta' : 'mo';
+                    if (newWChk != oldWChk) {
+                        oldWChk = newWChk;
+                        flowBannerAct();
+                    }
+                });
+
+                //배너 실행 함수
+                function flowBannerAct() {
+                    //배너 롤링 초기화
+                    if (wrapWidth != '') {
+                        $wrap.find('.list').css({
+                            'animation': 'none'
+                        });
+                        $wrap.find('.list').slice(2).remove();
+                    }
+                    wrapWidth = $wrap.width();
+                    listWidth = $list.width();
+
+                    //무한 반복을 위해 리스트를 복제 후 배너에 추가
+                    if (listWidth < wrapWidth) {
+                        const listCount = Math.ceil(wrapWidth * 2 / listWidth);
+                        for (let i = 2; i < listCount; i++) {
+                            $clone = $clone.clone();
+                            $wrap.append($clone);
+                        }
+                    }
+                    $wrap.find('.list').css({
+                        'animation': `${listWidth / speed}s linear infinite flowRolling`
+                    });
+                }
+
+                /*                // 마우스가 요소 위로 진입했을 때 일시정지
+                               $wrap.on('mouseenter', function () {
+                                  $wrap.find('.list').css('animation-play-state', 'paused');
+                               });
+                      
+                               // 마우스가 요소에서 빠져나갈 때 재생
+                               $wrap.on('mouseleave', function () {
+                                  $wrap.find('.list').css('animation-play-state', 'running');
+                               }); */
+
+                $('section.art .img').hover(function () {
+                    $(this).addClass('on')
+                }, function () {
+                    $(this).removeClass('on')
+
+                })
+            }
+        </script>
+    </section><!-- //.main -->
+    <section class="about">
+        <h2>about</h2>
+        <div class="container">
+            <div class="txt">
+                <div class="txt_top">
+                    <p>I AM</p>
+                    <span>WEB<br>DESIGNER</span>
+                </div>
+                <div class="txt_bottom">
+                    <span>&</span>
+                    <span>GRAPHIC<br>DESIGNER</span>
+                </div>
+            </div><!-- //.txt -->
+        </div>
+    </section><!-- //.about -->
+    <section class="show">
+        <h2>show</h2>
+        <div class="bg_txt">
+            <span>PROJECT<br>SHOWCASES</span>
+        </div>
+    </section><!-- //.show -->
+    <section class="project">
+        <h2>project</h2>
+        <div class="container">
+            <div class="con pro1">
+                <div class="left">
+                    <span>01/</span>
+                    <span>SONY</span>
+                    <div class="txt_box">
+                        <ul class="service">
+                            <li>SERVICE</li>
+                            <li>WEB DESIGN</li>
+                            <li>PROTOTYPING</li>
+                            <li>LANDING PAGE</li>
+                        </ul>
+                        <ul class="year">
+                            <li>YEAR</li>
+                            <li>2023.10</li>
+                        </ul>
+                    </div>
+                    <button type="button" onclick="window.open('sub_work.html')">VIEW
+                        PROJECT</button>
+                </div><!-- //.left -->
+                <div class="right">
+                    [10 / 2023]
+                    <div class="img"><a href='sub_work.html' target="_blank"></a></div>
+                </div><!-- //.right -->
+            </div><!-- //.pro1 -->
+            <div class="con pro2">
+                <div class="left">
+                    <span>02/</span>
+                    <span>Tara</span>
+                    <div class="txt_box">
+                        <ul class="service">
+                            <li>SERVICE</li>
+                            <li>WEB DESIGN</li>
+                            <li>PROTOTYPING</li>
+                            <li>MAGAZINE</li>
+                        </ul>
+                        <ul class="year">
+                            <li>YEAR</li>
+                            <li>2023.09</li>
+                        </ul>
+                    </div>
+                    <button type="button" onclick="window.open('sub_work2.html')">VIEW
+                        PROJECT</button>
+                </div>
+                <div class="right">
+                    [09 / 2023]
+                    <div class="img"><a href='sub_work2.html' target="_blank"></a></div>
+                </div>
+            </div><!-- //.pro2 -->
+            <div class="con pro3">
+                <div class="left">
+                    <span>03/</span>
+                    <span>국립중앙박물관</span>
+                    <div class="txt_box">
+                        <ul class="service">
+                            <li>SERVICE</li>
+                            <li>WEB DESIGN</li>
+                            <li>PROTOTYPING</li>
+                            <li>LIBRARY</li>
+                        </ul>
+                        <ul class="year">
+                            <li>YEAR</li>
+                            <li>2023.11</li>
+                        </ul>
+                    </div>
+                    <button type="button" onclick="window.open('sub_work3.html')">VIEW
+                        PROJECT</button>
+                </div>
+                <div class="right">
+                    [11 / 2023]
+                    <div class="img"><a href='sub_work3.html' target="_blank"></a></div>
+                </div>
+            </div><!-- //.pro3 -->
+        </div>
+    </section><!-- //.project -->
+    <section class="app">
+        <h2>app</h2>
+        <div class="container">
+            <div class="txt">
+                <div class="tit">
+                    <p>일상의 모든 기록을 도와주는 서비스</p>
+                    <span>WAKEY</span>
+                </div><!-- //.tit -->
+                <div class="txt_box">
+                    <ul class="left">
+                        <li>Timline</li>
+                        <li>Leading Part</li>
+                        <li>Platform</li>
+                    </ul>
+                    <ul class="right">
+                        <li>2023.11</li>
+                        <li>UI Design 100%</li>
+                        <li>Application</li>
+                    </ul>
+                    <div class="view"><button type="button" onclick="window.open('sub_work4.html')">VIEW
+                            PROJECT</button>
+                    </div>
+                </div><!-- //.txt_box -->
+            </div><!-- //.txt -->
+            <div class="img_box">
+                <ul>
+                    <li><a href="sub_work4.html" target="_blank"><img src="img/appmain.png" alt=""></a></li>
+                    <li><a href="sub_work4.html" target="_blank"><img src="img/appmain2.png" alt=""></a></li>
+                    <li><a href="sub_work4.html" target="_blank"><img src="img/appmain3.png" alt=""></a></li>
+                    <li><a href="sub_work4.html" target="_blank"><img src="img/appmain4.png" alt=""></a></li>
+                    <li><a href="sub_work4.html" target="_blank"><img src="img/appmain5.png" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+    </section><!-- //.app -->
+    <section class="other">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <h3>Go to link</h3>
+                    <a href="http://jipyo0o8.dothome.co.kr/gentle_monster" target="_blank">
+                        <img src="img/other1.PNG" alt="gentle monster"></a>
+                    <h3>GENTLE MONSTER</h3>
+                </div>
+                <div class="swiper-slide">
+                    <h3>Go to link</h3>
+                    <a href="http://jipyo0o8.dothome.co.kr/marie_claire/" target="_blank">
+                        <img src="img/other2.PNG" alt="marie claire"></a>
+                    <h3>marie claire</h3>
+                </div>
+                <div class="swiper-slide">
+                    <h3>Go to link</h3>
+                    <a href="http://jipyo0o8.dothome.co.kr/nct127" target="_blank">
+                        <img src="img/other3.PNG" alt="nct127"></a>
+                    <h3>NCT 127</h3>
+                </div>
+                <div class="swiper-slide">
+                    <h3>Go to link</h3>
+                    <a href="http://jipyo0o8.dothome.co.kr/airmax" target="_blank">
+                        <img src="img/other4.PNG" alt="airmax"></a>
+                    <h3>NIKE - airMax</h3>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <section class="art" onclick="window.open('art.html')">
+        <div class="img i1"></div>
+        <div class="img i2"></div>
+        <div class="img i3"></div>
+        <div class="img i4"></div>
+        <div class="img i5"></div>
+        <div class="img i6"></div>
+        <div class="img i7"></div>
+        <div class="img i8"></div>
+        <h2>art</h2>
+        <span>@2022-2023</span>
+        <p>GRAPHIC<br>ART WORK</p>
+        <span>INDEPENDENT ART DEGIGN</span>
+    </section><!-- //.art -->
+    <section class="story">
+        <h2>story</h2>
+        <div class="container">
+            <span>DESIGN STORY</span>
+            <div class="txt">
+                <p>The sunset and red soil of 'Tara' symbolize the solid earth. <br>On this earth, people have the power
+                    and
+                    symbolism to live another tomorrow, the way to regain <br>the love they missed.
+                    <br> Even modern ordinary people
+                    who
+                    are standing here now have their own rides.<br><br>For someone, wouldn’t it be their own tara where
+                    they
+                    go
+                    when
+                    they’re tired, want to cry, and want to find hope?
+                    <br>
+                </p>
+                <p>
+                    '타라'는 노을 빛과 붉은 흙을 상징하는 단단한 대지라는 의미를 가지고 있습니다.<br> 이 대지 위에서 사람들은 놓친 사랑을 되찾을 길을, 또 다른 내일을 살아갈 힘을 얻고
+                    상징성을
+                    가집니다.<br> 발 딛고 서 있는 이곳만인 전부일 뿐인 현대의 사람들에게도 저마다 타라는 있습니다.
+                    <br><br>누군가에게는 힘들 때, 지칠 때, 울고 싶을 때 그래서 희망을 찾고 싶을 때 찾아가는 곳이 그들만의 타라일 수도 <br>있지 않을까요?
+                </p>
+            </div>
+        </div>
+    </section><!-- //.story -->
+    <section class="roll">
+        <h2>roll</h2>
+        <span>CONTACT</span>
+    </section><!-- //.roll -->
+    <footer>
+        <div class="f_top">
+            <ul>
+                <li>WEB DEVELOPMENT</li>
+                <li>BRANDING</li>
+                <li>UI/UX</li>
+                <li>ART DIRECTION</li>
+                <li>GRAPHIC DESIGN</li>
+            </ul>
+        </div><!-- //.f_top -->
+        <div class="f_bottom">
+            <div class="container">
+                <div class="txt">
+                    <ul>
+                        <li>Email : rhtnduss@naver.com</li>
+                        <li>Instagram @trouveztara</li>
+                    </ul>
+                </div>
+            </div>
+        </div><!-- //.f_bottom -->
+    </footer>
+</body>
+
+</html>

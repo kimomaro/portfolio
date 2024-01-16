@@ -1,0 +1,16 @@
+@charset "utf-8";
+body{
+   cursor: none;
+}
+.cursor_item{
+   width: 40px;
+   height: 40px;
+/*    border: 2px solid #000000; */
+   background-color: rgba(250, 160, 27, 0.7);
+   z-index: 100;
+   border-radius: 50%;
+   position: absolute;
+   top: 0;
+   left: 0;
+ }
+ 

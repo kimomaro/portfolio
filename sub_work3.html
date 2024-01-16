@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sub_library</title>
+    <link rel="icon" href="favicon2.ico" type="image/x-icon">
+
+    <script src="https://kit.fontawesome.com/672e368b20.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/sub_work.css">
+    <link rel="stylesheet" href="css/sub_work3.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/sub.js"></script>
+    <script>
+        $(function () {
+            //close 버튼 
+            $(window).scroll(function () {
+                let st = $(window).scrollTop();
+                if (st > 1800) {
+                    $('img.close').fadeIn();
+                } else {
+                    $('img.close').fadeOut()
+                }
+                //배경 스크롤시 패딩값 변화
+
+                if (st > 700 && st < 2000) {
+                    $('section.main_visual .bg').animate({ padding: '0 100px 100px 100px' }, 1000)
+                } else if (st >= 2000) {
+                    $('section.main_visual .bg').css('padding', '0px')
+                } else {
+                    return
+                }
+            })
+
+        })
+    </script>
+</head>
+
+<body>
+    <a href="index.html"><img src="img/close.png" alt="" class="close"></a>
+    <section class="main_visual">
+        <h2>main_visual</h2>
+        <div class="bg"><img src="img/library_main.png" alt=""></div>
+    </section><!-- //.main_visual -->
+    <section class="txt">
+        <h2>txt</h2>
+        <div class="container">
+            <div class="tit">
+                <span>국립중앙도서관</span>
+               <div class="visit" onclick="window.open('http://jipyo0o8.dothome.co.kr/library2/')">Visit Website</div>
+           </div>
+            <div class="word">
+                <div class="txt_left">
+                    <span>PROJECT BACKGROUND</span>
+                    <p> 국립중앙도서관은 변화하는 시대에 맞춰 종이 매체에서 온라인 자료에 이르기까지 풍부한 장서를 구축하고 있으며, 다양한 국민의 수요에 맞춰 누구나 손쉽게 자료를 이용할 수 있도록 지식문화유산 이용 서비스 구현에 도움을 주고 있습니다.
+                        모든 세대를 잇고 사람을 잇는 지식정보서비스 구현을 목표로
+                        대표색인 블루 컬러로 깔끔하지만 다양한 정보를 손쉽게 알아볼 수 있는 정리된 컨텐츠로 구현을 목적으로 리디자인하였습니다.
+                       </p>
+                </div><!-- //.txt_left -->
+                <ul class="middle">
+                    <li>SERVICE</li>
+                    <li>WEB DESIGN</li>
+                    <li>PROTOTYPING</li>
+                    <li>LIBRARY</li>
+                </ul>
+                <ul class="right">
+                    <li>Year</li>
+                    <li>2023.11</li>
+                </ul>
+            </div><!-- //.word -->
+        </div><!-- //.container -->
+    </section><!-- //.tit -->
+    <section class="overview">
+        <h2>overview</h2>
+        <div class="container">
+            <span>[OVERVIEW]</span>
+            <img src="img/overview3.png" alt="">
+        </div><!-- //.container -->
+    </section><!-- //.overview -->
+    <section class="logo">
+        <h2>logo</h2>
+        <div class="container">
+            <div class="logo_left">
+                대표색인 블루 컬러로 깔끔하지만 도서관의 건물 외관 특성을 담은 모양으로를 손쉽게 알아볼 수 있는 정리된 로고입니다.
+            </div><!-- //.txt_box -->
+            <div class="logo_right">
+                <span>[LOGO]</span>
+                <div class="img_box"></div>
+            </div><!-- //.img_box -->
+        </div><!-- //.container -->
+    </section><!-- //.logo -->
+    <section class="content">
+        <h2>content</h2>
+        <span>[CONTENT OVERVIEW]</span>
+        <video src="img/library2.mp4 "   loop autoplay muted></video>
+        <p>카테고리마다 뉴스레터를 볼 수 있는 페이지로 화살표로 뉴스의 카드의 크기를 키워주면서<br> 재미있게 뉴스의 흐름을 알 수 있습니다</p>
+    </section>
+    <section class="content">
+        <h2>content</h2>
+        <video src="img/library1.mp4 "   loop autoplay muted></video>
+
+        <p>카테고리마다 뉴스레터를 볼 수 있는 페이지로 화살표로 뉴스의 카드의 크기를 키워주면서 재미있게 뉴스의 흐름을 알 수 있습니다</p>
+    </section>
+    <section class="video">
+        <h2>video</h2>
+        <img src="img/library_video2.png" alt="">
+        <img src="img/library_video.png" alt="">
+    </section><!-- //.last -->
+        <section class="laptop">
+            <div class="bg">
+                <div class="img"><img src="img/library_labtop_img.png" alt=""></div>
+            </div><!-- //.bg -->
+        </section><!-- //.laptop -->
+        <section class="footer">
+            <div class="f_top">
+                <p>Next project</p>
+                <span>04/Wakey</span>
+                <button type="button" onclick="location.href = 'sub_work2.html'">VIEW PROJECT</button>
+            </div><!-- //.f_top -->
+            <div class="f_bottom">
+                <img src="img/1.png" alt="">
+            </div><!-- //.f_bottom -->
+        </section><!-- //.footer -->
+</body>
+
+</html>

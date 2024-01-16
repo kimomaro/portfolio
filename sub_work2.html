@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sub_Tara</title>
+    <link rel="icon" href="favicon2.ico" type="image/x-icon">
+
+    <script src="https://kit.fontawesome.com/672e368b20.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/sub_work.css">
+    <link rel="stylesheet" href="css/sub_work2.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/sub_tara.js"></script>
+    <script>
+        $(function () {
+            //close 버튼 
+            $(window).scroll(function () {
+                let st = $(window).scrollTop();
+                if (st > 1400) {
+                    $('img.close').fadeIn();
+                } else {
+                    $('img.close').fadeOut()
+                }
+                //배경 스크롤시 패딩값 변화
+                if (st > 700 && st < 2000) {
+                    $('section.main_visual .bg').animate({ padding: '0 100px 100px 100px' }, 1000)
+                } else if (st >= 2000) {
+                    $('section.main_visual .bg').css('padding', '0px')
+                } else {
+                    return
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <a href="index.html"><img src="img/close.png" alt="" class="close"></a>
+    <section class="main_visual">
+        <h2>main_visual</h2>
+        <div class="bg"><img src="img/tara_main.png" alt=""></div>
+    </section><!-- //.main_visual -->
+    <section class="txt">
+        <h2>txt</h2>
+        <div class="container">
+            <div class="tit">
+                <span>Tara</span>
+               <div class="visit">Visit Website</div>
+           </div>
+            <div class="word">
+                <div class="txt_left">
+                    <span>PROJECT BACKGROUND</span>
+                    <p>웹진(Webzine)이란 월드 와이드 웹(web)과 잡지(magazine)의 합성어로 잡지, 브러슈어, 소식지와 같은 종이매체처럼 인쇄하지 않고 인터넷상으로만 발간되는 잡지를
+                        의미합니다.
+                        Tara는 프랑스 문화 전문 웹진으로서 프린트 매거진 뿐 아니라 웹, 모바일, 소셜 미디어 등 디지털 플랫폼에서도 시대의 흐름에 맞는 콘텐츠 기획과 접근으로 새로운 세대를
+                        지속적으로 사로잡으며 강력한 하나의 브랜드로 트렌드를 전달합니다.
+                    </p>
+                </div><!-- //.txt_left -->
+                <ul class="middle">
+                    <li>SERVICE</li>
+                    <li>WEB DESIGN</li>
+                    <li>PROTOTYPING</li>
+                    <li>MAGAZINE</li>
+                </ul>
+                <ul class="right">
+                    <li>Year</li>
+                    <li>2023.09</li>
+                </ul>
+            </div><!-- //.word -->
+        </div><!-- //.container -->
+    </section><!-- //.tit -->
+    <section class="overview">
+        <h2>overview</h2>
+        <div class="container">
+            <span>[OVERVIEW]</span>
+            <img src="img/overview2.png" alt="">
+        </div><!-- //.container -->
+    </section><!-- //.overview -->
+
+    <section class="content">
+        <h2>contnet</h2>
+        <span>[CONTENT OVERVIEW]</span>
+        <img src="img/tara_content_overview.png" alt="">
+        <p>카테고리마다 뉴스레터를 볼 수 있는 페이지로 화살표로 <br>뉴스의 카드의 크기를 키워주면서 재미있게 뉴스의 흐름을 알 수 있습니다</p>
+    </section>
+    <section class="video">
+        <h2>video</h2>
+        <img src="img/tara_video2.png" alt="">
+        <img src="img/tara_video.png" alt="">
+    </section><!-- //.last -->
+    <section class="laptop">
+        <div class="bg">
+            <div class="img"><img src="img/tara_labtop_img.png" alt=""></div>
+        </div><!-- //.bg -->
+    </section><!-- //.laptop -->
+    <section class="footer">
+        <div class="f_top">
+            <p>Next project</p>
+            <span>03/국립중앙박물관</span>
+            <button type="button" onclick="location.href = 'sub_work3.html'">VIEW PROJECT</button>
+        </div><!-- //.f_top -->
+        <div class="f_bottom">
+            <img src="img/1.png" alt="">
+        </div><!-- //.f_bottom -->
+    </section><!-- //.footer -->
+</body>
+
+</html>

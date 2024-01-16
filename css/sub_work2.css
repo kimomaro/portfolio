@@ -1,0 +1,137 @@
+@charset "utf-8";
+section.video {
+    background-color: #7e7e7e;
+    width: 100%;
+    height: 1100px;
+    position: relative;
+}
+
+section.video img {
+    position: absolute;
+}
+
+section.video img:nth-child(2) {
+    left: 15%;
+    bottom: 15%;
+    width:870px;
+}
+
+section.video img:nth-child(3) {
+    top: -10%;
+    right: 10%;
+    width:1030px;
+}
+
+
+/* section.last {
+    width: 100%;
+    height: 2400px;
+    background-image: url(../img/tara_footer_bg.png);
+    background-size: contain;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    position: relative;
+} */
+
+
+section.laptop {
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    position: relative;
+
+}
+
+section.laptop .bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-image: url(../img/sony_laptop.png);
+    width: 1030px;
+    height: 679px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0 0 50px 50px;
+
+}
+
+section.laptop .bg .img {
+    width: 960px;
+    height: 600px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    overflow-Y: scroll;
+    overflow-X: hidden;
+
+    background-color: #000;
+
+}
+section.laptop .bg .img img{
+    width: 950px;
+    object-fit: cover;
+
+}
+.footer {
+    width: 100%;
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+        padding: 50px 50px;
+    box-sizing: border-box;
+    background-image: url(../img/sony_footer_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+background-attachment: fixed;
+
+}
+
+.footer .f_top {
+    display: flex;
+    flex-direction: column;
+    color: #FFFCED;
+
+}
+
+.footer .f_top p {
+    font-size: 20px;
+    display: inline-block;
+    font-weight: 300;
+}
+
+.footer .f_top span {
+    font-size: 80px;
+    display: inline-block;
+    margin-bottom: 50px;
+    letter-spacing: 3px;
+
+}
+
+.footer .f_top button {
+    width: 150px;
+    height: 43px;
+    line-height: 43px;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #FFFCED;
+    color: #FFFCED;
+    border-radius: 30px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+
+.footer .f_top button:hover {
+    background-color: #FFFCED;
+    color: #000;
+}
+
+.footer .f_bottom {
+
+}
+.footer .f_bottom img{
+    width: 500px;
+}

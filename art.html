@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <title>Swiper demo</title>
+   <link rel="icon" href="favicon2.ico" type="image/x-icon">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+   <!-- Link Swiper's CSS -->
+   <script src="https://kit.fontawesome.com/672e368b20.js" crossorigin="anonymous"></script>
+   <script
+   src="https://code.jquery.com/jquery-3.7.1.min.js"
+   integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+   crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="css/art.css">
+   <script>
+      //nav
+      $(function () {
+         //햄버거 클릭했을때
+         $('nav .ham').click(function () {
+            $('nav').addClass('active');
+         })
+         $('nav .close').click(function () {
+            $('nav').removeClass('active');
+         })
+         //home 클릭했을때
+         $('nav ul li').click(function () {
+            
+         })
+         $('nav ul li').eq(0).click(function () {
+            $('nav').removeClass('active');
+            $('html,body').animate({
+               scrollTop: 0,
+            }, 600)
+         });
+         $('nav ul li').eq(1).click(function () {
+            $('nav').removeClass('active');
+            let at = $('section.about').offset().top;
+            console.log(at)
+            $('html,body').stop().animate({
+               scrollTop: at,
+            }, 600)
+         });
+         $('nav ul li').eq(2).click(function () {
+            $('nav').removeClass('active');
+            let st = $('section.show').offset().top;
+            console.log(st)
+            $('html,body').stop().animate({
+               scrollTop: st,
+            }, 600)
+         });
+         $('nav ul li').eq(3).click(function () {
+            $('nav').removeClass('active');
+            let art = $('section.art').offset().top;
+            console.log(art)
+            $('html,body').stop().animate({
+               scrollTop: art,
+            }, 600)
+         });
+         $('nav ul li').eq(4).click(function () {
+            $('nav').removeClass('active');
+            let rt = $('section.roll').offset().top;
+            console.log(rt)
+            $('html,body').stop().animate({
+               scrollTop: rt,
+            }, 600)
+         });
+      })
+   </script>
+   <!-- Demo styles -->
+
+</head>
+
+<body>
+   <header>
+      <div class="logo" onclick="location.href = 'index.html'"><img src="img/logo.png" alt=""></div>
+      <div class="over">[OVERVIEW]</div>
+   </header>
+   <!-- Swiper -->
+   <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide on"><img src="img/Artboard1.png" alt=""></div>
+         <div class="swiper-slide on"><img src="img/Artboard2.png" alt=""></div>
+         <div class="swiper-slide on"><img src="img/Artboard3.png" alt=""></div>
+         <div class="swiper-slide on"><img src="img/Artboard4.png" alt=""></div>
+         <div class="swiper-slide on"><img src="img/Artboard5.png" alt=""></div>
+         <div class="swiper-slide on"><img src="img/Artboard6.png" alt=""></div>
+         <div class="swiper-slide on"><img src="img/Artboard7.png" alt=""></div>
+         <div class="swiper-slide on"><img src="img/Artboard8.png" alt=""></div>
+         <div class="swiper-slide on"><img src="img/Artboard9.png" alt=""></div>
+         <div class="swiper-slide on"><img src="img/Artboard10.png" alt=""></div>
+         <div class="swiper-slide on"><img src="img/Artboard11.png" alt=""></div>
+         <div class="swiper-slide on"><img src="img/Artboard12.png" alt=""></div>
+         <div class="swiper-slide on"><img src="img/Artboard13.png" alt=""></div>
+         <div class="swiper-slide on"><img src="img/Artboard14.png" alt=""></div>
+         <div class="swiper-slide on"><img src="img/Artboard15.png" alt=""></div>
+         <div class="swiper-slide on"><img src="img/Artboard16.png" alt=""></div>
+         <div class="swiper-slide on"><img src="img/Artboard17.png" alt=""></div>
+         <div class="swiper-slide on"><img src="img/Artboard18.png" alt=""></div>
+         <div class="swiper-slide on"><img src="img/Artboard19.png" alt=""></div>
+         <div class="swiper-slide on"><img src="img/Artboard20.png" alt=""></div>
+         <div class="swiper-slide on"><img src="img/Artboard22.png" alt=""></div>
+         <div class="swiper-slide on"><img src="img/Artboard23.png" alt=""></div>
+         <div class="swiper-slide on"><img src="img/Artboard24.png" alt=""></div>
+         <div class="swiper-slide on"><img src="img/Artboard25.png" alt=""></div>
+         <div class="swiper-slide on"><img src="img/Artboard26.png" alt=""></div>
+         <div class="swiper-slide on"><img src="img/Artboard27.png" alt=""></div>
+         <div class="swiper-slide on"><img src="img/Artboard28.png" alt=""></div>
+         <div class="swiper-slide on"><img src="img/Artboard29.png" alt=""></div>
+         <div class="swiper-slide on"><img src="img/Artboard30.png" alt=""></div>
+         <div class="swiper-slide on"><img src="img/Artboard31.png" alt=""></div>
+         <div class="swiper-slide on"><img src="img/Artboard32.png" alt=""></div>
+         <div class="swiper-slide on"><img src="img/Artboard33.png" alt=""></div>
+         <div class="swiper-slide on"><img src="img/Artboard34.png" alt=""></div>
+         <div class="swiper-slide on"><img src="img/Artboard35.png" alt=""></div>
+         <div class="swiper-slide on"><img src="img/Artboard36.png" alt=""></div>
+         <div class="swiper-slide on"><img src="img/Artboard37.png" alt=""></div>
+      </div>
+      <div class="swiper-pagination"></div>
+   </div>
+
+   <!-- Swiper JS -->
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+   <!-- Initialize Swiper -->
+   <script>
+
+
+      let swiper = new Swiper(".mySwiper", {
+         direction: "horizontal",
+         spaceBetween: 50,     // 슬라이드 간격 
+         slidesPerView: 1.5,   // 한번에 보이는 슬라이드 갯수
+         centeredSlides: true,  // 양쪽 미리보기
+         mousewheel: true,
+         loop: true,
+         pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      });
+      swiper.on('slideChange', function () {
+         console.log(swiper.realIndex);
+         $('.swiper-slide').removeClass('on');
+         $('.swiper-slide').eq(swiper.realIndex).addClass('on');
+      })
+
+
+
+   </script>
+</body>
+
+</html>

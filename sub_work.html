@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sub_sony</title>
+    <link rel="icon" href="favicon2.ico" type="image/x-icon">
+
+    <script src="https://kit.fontawesome.com/672e368b20.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/sub_work.css">
+    <link rel="stylesheet" href="css/sub_work1.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/sub.js"></script>
+    <script>
+        $(function () {
+            //close 버튼 
+            $(window).scroll(function () {
+                let st = $(window).scrollTop();
+                if (st > 1900) {
+                    $('img.close').fadeIn();
+                } else {
+                    $('img.close').fadeOut()
+                }
+                //배경 스크롤시 패딩값 변화
+
+                if (st > 700 && st < 2000) {
+                    $('section.main_visual .bg').animate({ padding: '0 100px 100px 100px' }, 1000)
+                } else if (st >= 2000) {
+                    $('section.main_visual .bg').css('padding', '0px')
+                } else {
+                    return
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <a href="index.html"><img src="img/close.png" alt="" class="close"></a>
+    <section class="main_visual">
+        <h2>main_visual</h2>
+        <div class="bg"><img src="img/our_stories.jpg" alt=""></div>
+    </section><!-- //.main_visual -->
+    <section class="txt">
+        <h2>txt</h2>
+        <div class="container">
+            <div class="tit">
+                 <span>SONY</span>
+                <div class="visit"  onclick="window.open('http://jipyo0o8.dothome.co.kr/sony/')">Visit Website</div>
+            </div>
+            <div class="word">
+                <div class="txt_left">
+                    <span>PROJECT BACKGROUND</span>
+                    <!--                     <button type="button" onclick="window.open('sub_work3.html')" >Go to link</button> -->
+                    <p>소니는 1946년 설립된 일본을 대표하는 다국적 기업입니다. 엔터테인먼트와 금융, 반도체, 디스플레이 등으로 확장시킨 복합 기업으로 전체적으로 무채색의 컬러와 보라색의
+                        대표컬러를
+                        사용하여 소니만의 테크놀로지를 잘 보여줄 수 있는 디자인으로 리디자인 하였습니다.</p>
+                </div><!-- //.txt_left -->
+                <ul class="middle">
+                    <li>SERVICE</li>
+                    <li>WEB DESIGN</li>
+                    <li>PROTOTYPING</li>
+                    <li>LANDING PAGE</li>
+                </ul>
+                <ul class="right">
+                    <li>Year</li>
+                    <li>2023.11</li>
+                </ul>
+            </div><!-- //.word -->
+        </div><!-- //.container -->
+    </section><!-- //.tit -->
+    <section class="overview">
+        <h2>overview</h2>
+        <div class="container">
+            <span>[OVERVIEW]</span>
+            <img src="img/overview.png" alt="">
+        </div><!-- //.container -->
+    </section><!-- //.overview -->
+    <section class="logo">
+        <h2>logo</h2>
+        <div class="container">
+            <div class="logo_left">
+                전자와 엔터테인먼트가 하나의 연합과도 같은 소니를 구상하면서 내건 슬로건으로 창의성과 우월한 기술력을 통해서 이상을 현실로 만들 수 있는 소니라는 뜻으로 만든 로고입니다.
+            </div><!-- //.txt_box -->
+            <div class="logo_right">
+                <span>[LOGO]</span>
+                <div class="img_box"></div>
+            </div><!-- //.img_box -->
+        </div><!-- //.container -->
+    </section><!-- //.logo -->
+    <section class="content">
+        <h2>contnet</h2>
+        <span>[CONTENT OVERVIEW]</span>
+        <video src="img/sony.mp4" loop autoplay muted></video>
+        <p>소니의 제품을 잘 살릴 수 있는 화면 구성으로 다양한 제품을 구경하는 사용자가 많은 점을<br>
+            고려해 제품을 모양으로 먼저 볼 수 있는 컨텐츠로 사용자의 흥미를 이끌어냅니다.</p>
+    </section>
+    <section class="video">
+        <h2>video</h2>
+        <img src="img/sony_video2.png" alt="">
+        <div class="img">
+            <video src="img/sony2.mp4" loop autoplay muted></video>
+        </div>
+    </section><!-- //.last -->
+    <section class="laptop">
+        <div class="bg">
+            <div class="img"><img src="img/sony_labtop_img.png" alt=""></div>
+        </div><!-- //.bg -->
+    </section><!-- //.laptop -->
+    <section class="footer">
+        <div class="f_top">
+            <p>Next project</p>
+            <span>02/TARA</span>
+            <button type="button" onclick="location.href = 'sub_work2.html'">VIEW PROJECT</button>
+        </div><!-- //.f_top -->
+        <div class="f_bottom">
+            <img src="img/1.png" alt="">
+        </div><!-- //.f_bottom -->
+    </section><!-- //.footer -->
+</body>
+
+</html>
